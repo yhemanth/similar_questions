@@ -19,6 +19,8 @@ This is the current workflow, which can be hugely improved.
 ## Improvements possible
 
 * Do we really need mathpix? What we want is to convert a PDF with text including mathematical symbols to a markdown format. Is there a library that can do this for us?
+   * Research with GPT shows that the PDF I scan does not embed text well, it is actually some kind of image embedding. Hence, the workflow requires PDF -> OCR -> Markdown.
+   * I verified this by copy-pasting content in the PDF and it is garbled where the math symbols start showing up.
 * If the above is present, then we don't need to do post-processing like converting to a single line etc. That can be folded into code.
 * Even if the mathpix usage cannot be avoided, we can:
    * Look to automate mathpix through their API.
