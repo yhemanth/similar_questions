@@ -25,6 +25,7 @@ This is the current workflow, which can be hugely improved.
 * Even if the mathpix usage cannot be avoided, we can:
    * Look to automate mathpix through their API.
    * Do post processing through code.
+* Mathpix API has a one time setup cost of 19$ which seems high given I am not sure I will use it effectively. Hence looking at GPT as an alternative. The cost estimate from GPT seems to be quite cheap. So, probably will try this first.
 * The inputs to the ipynb can be read through a file that can be replaced. That way we don't need to copy the questions into a python array format everytime.
 * The whole workflow can be easily automated from the point of generating the questions in a single line to getting the representative questions from the clusters.
 * It is not entirely clear if the similarity is working as well as it should. We can check if there is a more superior embedding model that we can try.
