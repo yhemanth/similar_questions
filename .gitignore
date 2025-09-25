@@ -1,4 +1,5 @@
-.ipynb_checkpoints
-.venv
 images
 output
+.ipynb_checkpoints
+.env
+.venv
