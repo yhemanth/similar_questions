@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
+import re
 import sys
 
 def read_questions(directory, file_name="all-questions.md"):
@@ -43,9 +44,19 @@ def find_representative_questions(directory, cluster_count, file_name="all-quest
     return representatives
 
 def print_representative_questions(representatives):
+    pattern = pattern = r"^([^.]+)"
+    print("Representative questions from each cluster:")
+    question_map={}
     for cluster_id, question in representatives:
         fixed_question = question.encode('unicode_escape').decode()
-        print(f"Cluster {cluster_id}: {fixed_question}")
+        match = re.search(pattern, fixed_question)
+        if match:
+            extracted_substring = int(match.group(1).strip())
+            question_map[extracted_substring] = fixed_question.strip()
+        else:
+            print("No match found.")
+    for id in sorted(question_map.keys()):
+        print(question_map[id])
 
 if __name__ == "__main__":
     print("Inside main")
