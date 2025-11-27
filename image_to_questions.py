@@ -59,4 +59,4 @@ if __name__ == '__main__':
     scanned_text = scan_questions_page(client, input_file)
     print(f'Retrieved scanned_text from image file {input_file}')
     convert_scanned_text_to_questions(scanned_text, output_file)
-    print(f'Stored questios to file {output_file}')
+    print(f'Stored questions to file {output_file}')
