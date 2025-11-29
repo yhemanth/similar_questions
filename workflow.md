@@ -1,6 +1,15 @@
 # Workflow for selecting representative questions
 
-## Current workflow
+## Current workflow v1
+* Take a photo of the questions using the mobile phone.
+* Edit in Google photos, if required.
+* Download as a zip file and unzip in a temporary folder.
+* Run the script ```bin/rename_images.sh```
+* Run the python program ```bin/run_ocr.sh```
+* Get into the shell of the docker container
+* Run the python program ```python similar_questions.py <module_name> <number_of_clusters>```
+
+## Workflow v0
 This is the current workflow, which can be hugely improved.
 
 * Scan the questions using Adobe scanner on mobile.
@@ -18,14 +27,17 @@ This is the current workflow, which can be hugely improved.
 
 ## Improvements possible
 
-* Do we really need mathpix? What we want is to convert a PDF with text including mathematical symbols to a markdown format. Is there a library that can do this for us?
+* [RESOLVED] Do we really need mathpix? What we want is to convert a PDF with text including mathematical symbols to a markdown format. Is there a library that can do this for us?
+   * [SOLUTION] JPG images work well with GPT. It is cheaper than mathpix and is decent.
    * Research with GPT shows that the PDF I scan does not embed text well, it is actually some kind of image embedding. Hence, the workflow requires PDF -> OCR -> Markdown.
    * I verified this by copy-pasting content in the PDF and it is garbled where the math symbols start showing up.
-* If the above is present, then we don't need to do post-processing like converting to a single line etc. That can be folded into code.
-* Even if the mathpix usage cannot be avoided, we can:
+* [RESOLVED] If the above is present, then we don't need to do post-processing like converting to a single line etc. That can be folded into code.
+* [RESOLVED] Even if the mathpix usage cannot be avoided, we can:
    * Look to automate mathpix through their API.
    * Do post processing through code.
-* Mathpix API has a one time setup cost of 19$ which seems high given I am not sure I will use it effectively. Hence looking at GPT as an alternative. The cost estimate from GPT seems to be quite cheap. So, probably will try this first.
-* The inputs to the ipynb can be read through a file that can be replaced. That way we don't need to copy the questions into a python array format everytime.
-* The whole workflow can be easily automated from the point of generating the questions in a single line to getting the representative questions from the clusters.
+* [RESOLVED] Mathpix API has a one time setup cost of 19$ which seems high given I am not sure I will use it effectively. Hence looking at GPT as an alternative. The cost estimate from GPT seems to be quite cheap. So, probably will try this first.
+* [RESOLVED] The inputs to the ipynb can be read through a file that can be replaced. That way we don't need to copy the questions into a python array format everytime.
+   * [SOLUTION] Converted to Python program.
+* [RESOLVED] The whole workflow can be easily automated from the point of generating the questions in a single line to getting the representative questions from the clusters.
 * It is not entirely clear if the similarity is working as well as it should. We can check if there is a more superior embedding model that we can try.
+* Along the lines of the above, the key improvement is to try and cluster the questions by how to solve them as opposed to the text in the questions itself.
