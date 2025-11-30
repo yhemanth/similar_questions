@@ -10,7 +10,7 @@ import re
 import sys
 
 def read_questions(directory, file_name="all-questions.md"):
-    question_file = f"output/{directory}/{file_name}"
+    question_file = f"../output/{directory}/{file_name}"
     questions = []
     with open(question_file, 'r') as qf:
         questions = qf.readlines()
