@@ -7,9 +7,11 @@
 * Run the script ```bin/rename_images.sh```
 * Run the python program ```bin/run_ocr.sh```
 * Verify the following:
-   * Each output file has numbers against question. Sometimes it does not provide this.
    * Each output file has required number of questions according to the image.
-* If either of these conditions are not met, then manually correct the file.
+   * Each output file has numbers against question. Sometimes it does not provide this.
+* If either of these conditions are not met, then correct the file as below.
+   * If the output does not have the required number of questions, you have to manually fix it.
+   * If the output file does not have numbers against the question, then run the program (from ```src``` directory) ```python add_numbers.py <path to file> <starting question number>```
 * Then cat all text files with questions into 1 file in the same directory named all-questions.md
 * Get into the shell of the docker container
 * Run the python program ```python similar_questions.py <module_name> <number_of_clusters>```
