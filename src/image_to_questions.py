@@ -12,11 +12,11 @@ def initialize_openai_client():
     client = OpenAI()
     return client
 
-def scan_questions_page(client, questions_page_image):
+def scan_questions_page(client, questions_page_image, model_name="gpt-4o-mini"):
     with open(questions_page_image, "rb") as f:
         img_b64 = base64.b64encode(f.read()).decode("utf-8")
         response = client.chat.completions.create (
-            model="gpt-4o-mini",
+            model=model_name,
             messages=[
                 {"role": "system", "content": 
                         """Extract the math questions. Use Markdown and LaTeX for formulas.
@@ -49,14 +49,17 @@ def convert_scanned_text_to_questions(scanned_text, output_file):
 if __name__ == '__main__':
 
     if (len(sys.argv) < 3):
-        print(f"Usage: python {os.path.basename(__file__)}  <inputfile> <outputfile>")
+        print(f"Usage: python {os.path.basename(__file__)}  <inputfile> <outputfile> [model_name]")
         sys.exit(1)
 
     client = initialize_openai_client()
     print("Initialized OpenAI client.")
     input_file = sys.argv[1]
     output_file = sys.argv[2]
-    scanned_text = scan_questions_page(client, input_file)
+    model_name = "gpt-4.0-mini"
+    if (len(sys.argv) == 4):
+        model_name = sys.argv[3]
+    scanned_text = scan_questions_page(client, input_file, model_name)
     print(f'Retrieved scanned_text from image file {input_file}')
     convert_scanned_text_to_questions(scanned_text, output_file)
     print(f'Stored questions to file {output_file}')
