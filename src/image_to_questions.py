@@ -56,7 +56,7 @@ if __name__ == '__main__':
     print("Initialized OpenAI client.")
     input_file = sys.argv[1]
     output_file = sys.argv[2]
-    model_name = "gpt-4.0-mini"
+    model_name = "gpt-4o-mini"
     if (len(sys.argv) == 4):
         model_name = sys.argv[3]
     scanned_text = scan_questions_page(client, input_file, model_name)
