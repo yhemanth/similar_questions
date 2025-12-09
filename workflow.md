@@ -12,9 +12,8 @@
 * If either of these conditions are not met, then correct the file as below.
    * If the output does not have the required number of questions, you have to manually fix it.
    * If the output file does not have numbers against the question, then run the program (from ```src``` directory) ```python add_numbers.py <path to file> <starting question number>```
-* Then cat all text files with questions into 1 file in the same directory named all-questions.md
 * Get into the shell of the docker container
-* Run the python program ```python similar_questions.py <module_name> <number_of_clusters>```
+* Run the python program ```bin/select_questions.sh``` from ```app``` directory.
 
 ## Workflow v0
 This is the current workflow, which can be hugely improved.
