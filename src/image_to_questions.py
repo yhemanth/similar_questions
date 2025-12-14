@@ -6,13 +6,15 @@ import os
 import re
 import sys
 
+DEFAULT_MODEL_NAME="gpt-5.2"
+
 def initialize_openai_client():
     load_dotenv()
     api_key = os.getenv("OPENAI_API_KEY")
     client = OpenAI()
     return client
 
-def scan_questions_page(client, questions_page_image, model_name="gpt-4o-mini"):
+def scan_questions_page(client, questions_page_image, model_name=DEFAULT_MODEL_NAME):
     with open(questions_page_image, "rb") as f:
         img_b64 = base64.b64encode(f.read()).decode("utf-8")
         response = client.chat.completions.create (
@@ -56,9 +58,10 @@ if __name__ == '__main__':
     print("Initialized OpenAI client.")
     input_file = sys.argv[1]
     output_file = sys.argv[2]
-    model_name = "gpt-4o-mini"
+    model_name = DEFAULT_MODEL_NAME
     if (len(sys.argv) == 4):
         model_name = sys.argv[3]
+    print(f"Using model {model_name}")
     scanned_text = scan_questions_page(client, input_file, model_name)
     print(f'Retrieved scanned_text from image file {input_file}')
     convert_scanned_text_to_questions(scanned_text, output_file)
