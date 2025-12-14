@@ -4,3 +4,5 @@ output
 .env
 .venv
 input
+.vscode
+src/__pycache__

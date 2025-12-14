@@ -44,7 +44,7 @@ def find_representative_questions(directory, cluster_count, file_name="all-quest
     return representatives
 
 def print_representative_questions(representatives):
-    pattern = pattern = r"^([^.]+)"
+    pattern = r'^\s*\*{0,2}(\d+)\.?\*{0,2}\s'
     print("Representative questions from each cluster:")
     question_map={}
     for cluster_id, question in representatives:
