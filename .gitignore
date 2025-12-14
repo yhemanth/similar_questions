@@ -5,4 +5,4 @@ output
 .venv
 input
 .vscode
-src/__pycache__
+tests/__pycache__
