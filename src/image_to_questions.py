@@ -22,6 +22,9 @@ def scan_questions_page(client, questions_page_image, model_name=DEFAULT_MODEL_N
             messages=[
                 {"role": "system", "content": 
                         """Extract the math questions. Use Markdown and LaTeX for formulas.
+                        Each question will be numbered in the image. Firstly, include the right question number
+                        against the extracted question. Next, do not use any LaTex special characters for the question number.
+                        Leave it plain, like '1.' or '10.'.
                         Mark the start of every question with a token '<start>' and end of every question with '<end>'.
                         Extract all questions. Do not skip any, even if they look incomplete, unclear.
                         If something resembles a question, include it.
