@@ -1,0 +1,21 @@
+- term identification via exponent matching
+- coefficient identification of specific term
+- coefficient comparison / constraint solving
+- sum of coefficients evaluation
+- alternating sum of coefficients
+- value of expression using binomial expansion
+- rational term counting
+- integral term counting
+- greatest term identification
+- least term identification
+- middle term identification
+- ratio of consecutive terms
+- monotonicity of terms using term ratio
+- binomial expression simplification
+- transform expression to binomial form
+- coefficient of specific power (single binomial)
+- coefficient of specific power (product of expansions)
+- coefficient of specific power (negative / fractional index)
+- condition on index for term existence
+- symmetry-based term pairing
+- binomial identity application

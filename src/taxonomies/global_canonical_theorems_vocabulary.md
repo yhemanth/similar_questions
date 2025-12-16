@@ -1,0 +1,28 @@
+- algebraic identities (factorization / expansion)
+- exponent laws (index rules)
+- logarithm laws
+- Binomial Theorem (general term `T_(r+1)=nCr*a^(n-r)*b^r`)
+- binomial coefficient identities (symmetry / Pascal)
+- term ratio method (`T_(r+1)/T_r`)
+- integrality / rationality condition (integer exponent constraint)
+- modular / congruence condition
+- coefficient extraction by degree matching
+- properties of determinants
+- properties of matrices
+- properties of vectors (dot / cross)
+- trigonometric identities
+- inverse trigonometric properties
+- standard limits
+- continuity condition
+- differentiability condition
+- standard differentiation rules
+- standard integration results
+- fundamental theorem of calculus
+- mean value theorem family
+- Rolle’s theorem
+- differential equation standard form
+- permutation counting principles
+- combination counting principles
+- basic probability laws
+- geometric properties of conic sections
+- coordinate geometry distance / slope relations

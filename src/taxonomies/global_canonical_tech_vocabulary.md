@@ -1,0 +1,29 @@
+- convert to standard form
+- simplify using identities
+- convert to common base
+- match exponents
+- compare coefficients
+- apply term index mapping
+- use term ratio
+- enforce integrality constraint
+- reduce to congruence condition
+- count valid cases
+- reduce expression to known form
+- structural recognition of pattern
+- factorize expression
+- eliminate negative powers
+- reduce to single standard expression
+- extract coefficient by degree matching
+- transform variables
+- apply substitution
+- reduce to polynomial equation
+- analyze monotonicity
+- analyze extrema
+- analyze sign / intervals
+- apply boundary conditions
+- split into cases
+- reduce to standard differential equation
+- integrate term-wise
+- differentiate implicitly
+- use symmetry
+- use geometric interpretation

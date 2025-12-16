@@ -1,0 +1,61 @@
+- constant / parameter
+- variable exponent / parameter
+- polynomial / monomial expression
+- rational function
+- radical / surd (fractional power)
+- exponential expression
+- logarithmic expression
+- trigonometric expression
+- inverse trigonometric expression
+- absolute value / modulus
+- piecewise definition
+- sequence / series form
+- finite sum
+- infinite series
+- combinatorial counting structure
+- probability distribution / random variable
+- matrix expression
+- determinant expression
+- vector expression
+- coordinate geometry form
+- parametric representation
+- symmetric expression
+- positive & negative powers (Laurent form)
+- inequality / interval constraint
+- functional composition
+- implicit relation
+- differential equation form
+- definite integral form
+- indefinite integral form
+
+## TECH_VOCAB (Global)
+
+- convert to standard form
+- simplify using identities
+- convert to common base
+- match exponents
+- compare coefficients
+- apply term index mapping
+- use term ratio
+- enforce integrality constraint
+- reduce to congruence condition
+- count valid cases
+- reduce expression to known form
+- structural recognition of pattern
+- factorize expression
+- eliminate negative powers
+- reduce to single standard expression
+- extract coefficient by degree matching
+- transform variables
+- apply substitution
+- reduce to polynomial equation
+- analyze monotonicity
+- analyze extrema
+- analyze sign / intervals
+- apply boundary conditions
+- split into cases
+- reduce to standard differential equation
+- integrate term-wise
+- differentiate implicitly
+- use symmetry
+- use geometric interpretation
